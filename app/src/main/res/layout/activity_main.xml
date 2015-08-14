@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/top_text_margin_bottom"
+            android:layout_marginTop="@dimen/top_text_margin_top"
+            android:text="@string/portfolio_title_text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_spotify_streamer"
+                style="@style/ButtonStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_spotify_streamer_text" />
+
+            <Button
+                android:id="@+id/button_football_scores_app"
+                style="@style/ButtonStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_football_scores_app_text" />
+
+            <Button
+                android:id="@+id/button_library_app"
+                style="@style/ButtonStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_library_app_text" />
+
+            <Button
+                android:id="@+id/button_build_it_bigger"
+                style="@style/ButtonStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_build_it_bigger_text" />
+
+            <Button
+                android:id="@+id/button_xyz_reader"
+                style="@style/ButtonStyleNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_xyz_reader_text" />
+
+            <Button
+                android:id="@+id/button_capstone"
+                style="@style/ButtonStyleSpecial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendMessage"
+                android:text="@string/button_capstone_text" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
