@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+    Toast toast = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,11 @@ public class MainActivity extends Activity {
     }
 
     public void sendMessage(View view) {
+        if (toast != null) {
+            toast.cancel();
+            toast = null;
+        }
+
         String toastText = "This button will launch ";
         switch (view.getId()) {
             case R.id.button_spotify_streamer:
@@ -56,6 +62,7 @@ public class MainActivity extends Activity {
                 toastText += getString(R.string.button_capstone_text);
                 break;
         }
-        Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
+        toast = Toast.makeText(this, toastText, Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
